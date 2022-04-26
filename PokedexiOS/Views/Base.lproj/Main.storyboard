@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="PokedexiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-bZ-gh4">
+                                <rect key="frame" x="0.0" y="509" width="414" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y4D-4d-DGd">
+                                <rect key="frame" x="0.0" y="95" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y4D-4d-DGd" secondAttribute="height" multiplier="1:1" id="kpC-aY-grS"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Iqa-UA-lE1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(id)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k8-7R-EPy">
+                                <rect key="frame" x="0.0" y="552" width="414" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iqa-UA-lE1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="84C-o7-mx2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7k8-7R-EPy" secondAttribute="trailing" id="AL7-mC-PXb"/>
+                            <constraint firstItem="7k8-7R-EPy" firstAttribute="top" secondItem="5bP-bZ-gh4" secondAttribute="bottom" id="AxN-ca-4Qi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5bP-bZ-gh4" secondAttribute="trailing" id="D7y-uE-Pmm"/>
+                            <constraint firstItem="Iqa-UA-lE1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M3e-uP-Wpv"/>
+                            <constraint firstItem="y4D-4d-DGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MId-bm-PdP"/>
+                            <constraint firstItem="7k8-7R-EPy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PyF-AW-h9x"/>
+                            <constraint firstItem="5bP-bZ-gh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q7V-cY-j2q"/>
+                            <constraint firstItem="5bP-bZ-gh4" firstAttribute="top" secondItem="y4D-4d-DGd" secondAttribute="bottom" id="X2J-18-cBF"/>
+                            <constraint firstItem="Iqa-UA-lE1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bbz-5W-pcv"/>
+                            <constraint firstItem="y4D-4d-DGd" firstAttribute="top" secondItem="Iqa-UA-lE1" secondAttribute="bottom" id="dE9-q6-Zae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y4D-4d-DGd" secondAttribute="trailing" id="ngO-n8-OO4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokeIDLabel" destination="7k8-7R-EPy" id="aFE-Xd-d4y"/>
+                        <outlet property="pokeImageView" destination="y4D-4d-DGd" id="RdW-1X-VDF"/>
+                        <outlet property="pokeNameLabel" destination="5bP-bZ-gh4" id="GcH-0X-sBQ"/>
+                        <outlet property="pokeSearchBar" destination="Iqa-UA-lE1" id="925-df-vvz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
